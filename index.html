@@ -1204,13 +1204,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">locationId</div>
+                      <div class="prop-title">locationId:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in path </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>The location for which to get room availability</p>
@@ -1218,13 +1219,13 @@
                   </div>
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">checkInTimestampInSeconds</div>
-                      <span class="json-property-required"></span>
-                      <div class="prop-subtitle"> in query </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
+                      <div class="prop-title">checkInTimestampInSeconds:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
                       </div>
+                      <div class="prop-subtitle"> in query </div>
                     </div>
                     <div class="prop-value">
                       <p>Starting date from which to check availability</p>
@@ -1232,16 +1233,60 @@
                   </div>
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">checkOutTimestampInSeconds</div>
+                      <div class="prop-title">check_in_date:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in query </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                    <div class="prop-value">
+                      <p>Local date time description of starting date</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">checkOutTimestampInSeconds:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
                       </div>
+                      <div class="prop-subtitle"> in query </div>
                     </div>
                     <div class="prop-value">
                       <p>End date until which to check availability</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">check_out_date:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                      <span class="json-property-required"></span>
+                      <div class="prop-subtitle"> in query </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Local date time description of ending date</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">bad,:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                      <div class="prop-subtitle"> in query </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>An optional content identifier and pricing modifier</p>
                     </div>
                   </div>
                 </section>
@@ -1278,7 +1323,15 @@
     <span class="hljs-attr">&quot;rate_per_night_per_bed_or_room&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;full_stay_rate_per_bed_or_room&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;booking_id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;number_of_beds_or_rooms_available&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
+    <span class="hljs-attr">&quot;number_of_beds_or_rooms_available&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+    <span class="hljs-attr">&quot;all_rates&quot;</span>: [
+      {
+        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+        <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;price&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;isRefundable&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+      }
+    ]
   }
 ]
 </code></pre>
@@ -1319,13 +1372,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">spaceCategoryId</div>
+                      <div class="prop-title">spaceCategoryId:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in path </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>The space category for which to get space availability</p>
@@ -1333,13 +1387,28 @@
                   </div>
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">startTimestampInSeconds</div>
+                      <div class="prop-title">check_in_date:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in query </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                    <div class="prop-value">
+                      <p>Local date time description of starting date</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">startTimestampInSeconds:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
                       </div>
+                      <div class="prop-subtitle"> in query </div>
                     </div>
                     <div class="prop-value">
                       <p>Starting date from which to check availability</p>
@@ -1347,13 +1416,28 @@
                   </div>
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">endTimestampInSeconds</div>
+                      <div class="prop-title">check_out_date:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in query </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                    <div class="prop-value">
+                      <p>Local date time description of ending date</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">endTimestampInSeconds:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
                       </div>
+                      <div class="prop-subtitle"> in query </div>
                     </div>
                     <div class="prop-value">
                       <p>End date until which to check availability</p>
@@ -1430,13 +1514,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">activityId</div>
+                      <div class="prop-title">activityId:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in path </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>The activity for which to get availability</p>
@@ -1444,13 +1529,14 @@
                   </div>
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">startTimestampInSeconds</div>
+                      <div class="prop-title">startTimestampInSeconds:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in query </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Starting date from which to check availability</p>
@@ -1458,13 +1544,14 @@
                   </div>
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">endTimestampInSeconds</div>
+                      <div class="prop-title">endTimestampInSeconds:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in query </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>End date until which to check availability</p>
@@ -1545,13 +1632,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">rideId</div>
+                      <div class="prop-title">rideId:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in path </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>The ride for which to get availability</p>
@@ -1559,13 +1647,14 @@
                   </div>
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">startTimestampInSeconds</div>
+                      <div class="prop-title">startTimestampInSeconds:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in query </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Starting date from which to check availability</p>
@@ -1573,13 +1662,14 @@
                   </div>
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">endTimestampInSeconds</div>
+                      <div class="prop-title">endTimestampInSeconds:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in query </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>End date until which to check availability</p>
@@ -1660,13 +1750,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">eventId</div>
+                      <div class="prop-title">eventId:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in path </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>The event for which to get availability</p>
@@ -1674,13 +1765,14 @@
                   </div>
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">startTimestampInSeconds</div>
+                      <div class="prop-title">startTimestampInSeconds:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in query </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Starting date from which to check availability</p>
@@ -1688,13 +1780,14 @@
                   </div>
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">endTimestampInSeconds</div>
+                      <div class="prop-title">endTimestampInSeconds:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in query </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>End date until which to check availability</p>
@@ -1775,13 +1868,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">locationId</div>
+                      <div class="prop-title">locationId:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in path </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>The location for which to get the lowest-rate available room</p>
@@ -1872,13 +1966,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">Authorization</div>
+                      <div class="prop-title">Authorization:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in header </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Token which identifies the current user</p>
@@ -1901,7 +1996,10 @@
       }
     ],
     <span class="hljs-attr">&quot;check_in_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-    <span class="hljs-attr">&quot;check_out_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
+    <span class="hljs-attr">&quot;check_in_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;check_out_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+    <span class="hljs-attr">&quot;check_out_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;bad&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
   },
   <span class="hljs-attr">&quot;work&quot;</span>: {
     <span class="hljs-attr">&quot;items&quot;</span>: [
@@ -1909,7 +2007,9 @@
         <span class="hljs-attr">&quot;count&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
         <span class="hljs-attr">&quot;item_booking_id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;start_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-        <span class="hljs-attr">&quot;end_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
+        <span class="hljs-attr">&quot;check_in_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;end_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+        <span class="hljs-attr">&quot;check_out_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
       }
     ]
   },
@@ -2025,7 +2125,10 @@
         }
       ],
       <span class="hljs-attr">&quot;check_in_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-      <span class="hljs-attr">&quot;check_out_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
+      <span class="hljs-attr">&quot;check_in_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;check_out_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+      <span class="hljs-attr">&quot;check_out_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;bad&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     },
     <span class="hljs-attr">&quot;work&quot;</span>: {
       <span class="hljs-attr">&quot;items&quot;</span>: [
@@ -2033,7 +2136,9 @@
           <span class="hljs-attr">&quot;count&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
           <span class="hljs-attr">&quot;item_booking_id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;start_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-          <span class="hljs-attr">&quot;end_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
+          <span class="hljs-attr">&quot;check_in_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;end_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+          <span class="hljs-attr">&quot;check_out_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
         }
       ]
     },
@@ -2066,7 +2171,9 @@
   <span class="hljs-attr">&quot;stripe_charge_id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;total_amount_in_cents&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
   <span class="hljs-attr">&quot;checkin_timestamp_in_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+  <span class="hljs-attr">&quot;check_in_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;checkout_timestamp_in_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+  <span class="hljs-attr">&quot;check_out_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;listing_id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;listing_name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;listing_location&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -2158,7 +2265,24 @@
               </div>
             </div>
             <div class="doc-row">
-              <div class="doc-copy"> </div>
+              <div class="doc-copy">
+                <section class="swagger-request-params">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">bad,:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                      <div class="prop-subtitle"> in query </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>An optional content identifier</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
               <div class="doc-examples"></div>
             </div>
             <div class="doc-row">
@@ -2341,12 +2465,13 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">location_ids</div>
-                      <div class="prop-subtitle"> in query </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">string</span>
-                        <span class="json-property-range" title="Value limits"></span>
+                      <div class="prop-title">location_ids:
+                        <span class="prop-type">
+                          <span class="json-property-type">string</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
                       </div>
+                      <div class="prop-subtitle"> in query </div>
                     </div>
                     <div class="prop-value">
                       <p>Countries</p>
@@ -2354,15 +2479,30 @@
                   </div>
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">listing_ids</div>
-                      <div class="prop-subtitle"> in query </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">string</span>
-                        <span class="json-property-range" title="Value limits"></span>
+                      <div class="prop-title">listing_ids:
+                        <span class="prop-type">
+                          <span class="json-property-type">string</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
                       </div>
+                      <div class="prop-subtitle"> in query </div>
                     </div>
                     <div class="prop-value">
                       <p>Listing ids</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">bad,:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                      <div class="prop-subtitle"> in query </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>An optional content identifier</p>
                     </div>
                   </div>
                 </section>
@@ -2602,12 +2742,13 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">location_ids</div>
-                      <div class="prop-subtitle"> in query </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
+                      <div class="prop-title">location_ids:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
                       </div>
+                      <div class="prop-subtitle"> in query </div>
                     </div>
                     <div class="prop-value">
                       <p>An optional array of locations</p>
@@ -2615,12 +2756,13 @@
                   </div>
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">tag_ids</div>
-                      <div class="prop-subtitle"> in query </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
+                      <div class="prop-title">tag_ids:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
                       </div>
+                      <div class="prop-subtitle"> in query </div>
                     </div>
                     <div class="prop-value">
                       <p>An optional array of tags</p>
@@ -2628,13 +2770,28 @@
                   </div>
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">Authorization</div>
+                      <div class="prop-title">bad,:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                      <div class="prop-subtitle"> in query </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>An optional content identifier</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">Authorization:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in header </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Token which identifies the current user</p>
@@ -2769,13 +2926,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">locationId</div>
+                      <div class="prop-title">locationId:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in path </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>The id of the location</p>
@@ -2884,13 +3042,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">locationId</div>
+                      <div class="prop-title">locationId:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in path </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>The id of the location to add as favorite</p>
@@ -2898,13 +3057,14 @@
                   </div>
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">Authorization</div>
+                      <div class="prop-title">Authorization:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in header </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Token which identifies the current user</p>
@@ -3001,13 +3161,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">locationId</div>
+                      <div class="prop-title">locationId:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in path </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>The id of the location to delete from the favorites</p>
@@ -3015,13 +3176,14 @@
                   </div>
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">Authorization</div>
+                      <div class="prop-title">Authorization:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in header </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Token which identifies the current user</p>
@@ -3118,13 +3280,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">locationId</div>
+                      <div class="prop-title">locationId:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in path </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Location id</p>
@@ -3252,13 +3415,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">productId</div>
+                      <div class="prop-title">productId:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in path </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Product id</p>
@@ -3370,13 +3534,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">locationId</div>
+                      <div class="prop-title">locationId:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in path </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Location id</p>
@@ -3504,13 +3669,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">productId</div>
+                      <div class="prop-title">productId:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in path </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Product id</p>
@@ -3622,13 +3788,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">locationId</div>
+                      <div class="prop-title">locationId:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in path </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Location id</p>
@@ -3736,13 +3903,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">productId</div>
+                      <div class="prop-title">productId:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in path </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Product id</p>
@@ -3834,13 +4002,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">locationId</div>
+                      <div class="prop-title">locationId:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in path </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Location id</p>
@@ -3948,13 +4117,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">productId</div>
+                      <div class="prop-title">productId:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in path </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Product id</p>
@@ -4048,13 +4218,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">Authorization</div>
+                      <div class="prop-title">Authorization:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in header </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Token which identifies the current user</p>
@@ -4099,7 +4270,9 @@
       <span class="hljs-attr">&quot;listing_id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;stay&quot;</span>: {
         <span class="hljs-attr">&quot;check_in_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+        <span class="hljs-attr">&quot;check_in_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;check_out_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+        <span class="hljs-attr">&quot;check_out_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;listing_booking_id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;number_of_guests&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
         <span class="hljs-attr">&quot;rooms&quot;</span>: [
@@ -4177,13 +4350,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">Authorization</div>
+                      <div class="prop-title">Authorization:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in header </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Token which identifies the current user</p>
@@ -4228,7 +4402,9 @@
       <span class="hljs-attr">&quot;listing_id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;stay&quot;</span>: {
         <span class="hljs-attr">&quot;check_in_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+        <span class="hljs-attr">&quot;check_in_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;check_out_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+        <span class="hljs-attr">&quot;check_out_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;listing_booking_id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;number_of_guests&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
         <span class="hljs-attr">&quot;rooms&quot;</span>: [
@@ -4307,13 +4483,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">Authorization</div>
+                      <div class="prop-title">Authorization:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in header </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Token which identifies the current user</p>
@@ -4415,13 +4592,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">Authorization</div>
+                      <div class="prop-title">Authorization:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in header </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Token which identifies the current user</p>
@@ -4690,13 +4868,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">id</div>
+                      <div class="prop-title">id:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in path </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>User&#39;s id</p>
@@ -4829,13 +5008,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">Authorization</div>
+                      <div class="prop-title">Authorization:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in header </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Token which identifies the current user</p>
@@ -4956,13 +5136,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">Authorization</div>
+                      <div class="prop-title">Authorization:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in header </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Token which identifies the current user</p>
@@ -5112,13 +5293,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">Authorization</div>
+                      <div class="prop-title">Authorization:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in header </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Token which identifies the current user</p>
@@ -5126,13 +5308,14 @@
                   </div>
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">card</div>
+                      <div class="prop-title">card:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in path </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>The credit card id</p>
@@ -5258,13 +5441,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">Authorization</div>
+                      <div class="prop-title">Authorization:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in header </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Token which identifies the current user</p>
@@ -5272,13 +5456,14 @@
                   </div>
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">card</div>
+                      <div class="prop-title">card:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in path </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>The credit card id</p>
@@ -5353,13 +5538,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">Authorization</div>
+                      <div class="prop-title">Authorization:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in header </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Token which identifies the current user</p>
@@ -5367,13 +5553,14 @@
                   </div>
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">card</div>
+                      <div class="prop-title">card:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in path </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>The credit card id</p>
@@ -5446,13 +5633,14 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">Authorization</div>
+                      <div class="prop-title">Authorization:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
                       <span class="json-property-required"></span>
                       <div class="prop-subtitle"> in header </div>
-                      <div class="prop-subtitle">
-                        <span class="json-property-type">object</span>
-                        <span class="json-property-range" title="Value limits"></span>
-                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Token which identifies the current user</p>
@@ -6633,6 +6821,46 @@
                         <dd>
                           <p>Available beds/rooms remaining</p>
                         </dd>
+                        <dt data-property-name="all_rates" class="has-description">
+                          <span class="json-property-name">all_rates:</span>
+                          <span class="json-property-type">object[]</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </dt>
+                        <dd>
+                          <p>All the available rates for rooms or beds in the location</p>
+                        </dd>
+                        <dt class="json-inner-schema">
+                          <section class="json-schema-array-items">
+                            <span class="json-property-type">object</span>
+                            <span class="json-property-range" title="Value limits"></span>
+                            <div class="json-inner-schema">
+                              <section class="json-schema-properties">
+                                <dl>
+                                  <dt data-property-name="id">
+                                    <span class="json-property-name">id:</span>
+                                    <span class="json-property-type">number</span>
+                                    <span class="json-property-range" title="Value limits"></span>
+                                  </dt>
+                                  <dt data-property-name="description">
+                                    <span class="json-property-name">description:</span>
+                                    <span class="json-property-type">string</span>
+                                    <span class="json-property-range" title="Value limits"></span>
+                                  </dt>
+                                  <dt data-property-name="price">
+                                    <span class="json-property-name">price:</span>
+                                    <span class="json-property-type">string</span>
+                                    <span class="json-property-range" title="Value limits"></span>
+                                  </dt>
+                                  <dt data-property-name="isRefundable">
+                                    <span class="json-property-name">isRefundable:</span>
+                                    <span class="json-property-type">boolean</span>
+                                    <span class="json-property-range" title="Value limits"></span>
+                                  </dt>
+                                </dl>
+                              </section>
+                            </div>
+                          </section>
+                        </dt>
                       </dl>
                     </section>
                   </div>
@@ -6647,7 +6875,15 @@
     <span class="hljs-attr">&quot;rate_per_night_per_bed_or_room&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;full_stay_rate_per_bed_or_room&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;booking_id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;number_of_beds_or_rooms_available&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
+    <span class="hljs-attr">&quot;number_of_beds_or_rooms_available&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+    <span class="hljs-attr">&quot;all_rates&quot;</span>: [
+      {
+        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+        <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;price&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;isRefundable&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+      }
+    ]
   }
 ]
 </code></pre>
@@ -6938,13 +7174,33 @@
                             <span class="json-property-name">check_in_timestamp_seconds:</span>
                             <span class="json-property-type">number</span>
                             <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="check_in_date">
+                            <span class="json-property-name">check_in_date:</span>
+                            <span class="json-property-type">string</span>
+                            <span class="json-property-range" title="Value limits"></span>
                             <span class="json-property-required"></span>
+                          </dt>
+                          <dt data-property-name="required">
+                            <span class="json-property-name">required:</span>
+                            <span class="json-property-type">object</span>
+                            <span class="json-property-range" title="Value limits"></span>
                           </dt>
                           <dt data-property-name="check_out_timestamp_seconds">
                             <span class="json-property-name">check_out_timestamp_seconds:</span>
                             <span class="json-property-type">number</span>
                             <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="check_out_date">
+                            <span class="json-property-name">check_out_date:</span>
+                            <span class="json-property-type">string</span>
+                            <span class="json-property-range" title="Value limits"></span>
                             <span class="json-property-required"></span>
+                          </dt>
+                          <dt data-property-name="bad">
+                            <span class="json-property-name">bad:</span>
+                            <span class="json-property-type">string</span>
+                            <span class="json-property-range" title="Value limits"></span>
                           </dt>
                         </dl>
                       </section>
@@ -6986,11 +7242,21 @@
                                       <span class="json-property-name">start_timestamp_seconds:</span>
                                       <span class="json-property-type">number</span>
                                       <span class="json-property-range" title="Value limits"></span>
+                                    </dt>
+                                    <dt data-property-name="check_in_date">
+                                      <span class="json-property-name">check_in_date:</span>
+                                      <span class="json-property-type">string</span>
+                                      <span class="json-property-range" title="Value limits"></span>
                                       <span class="json-property-required"></span>
                                     </dt>
                                     <dt data-property-name="end_timestamp_seconds">
                                       <span class="json-property-name">end_timestamp_seconds:</span>
                                       <span class="json-property-type">number</span>
+                                      <span class="json-property-range" title="Value limits"></span>
+                                    </dt>
+                                    <dt data-property-name="check_out_date">
+                                      <span class="json-property-name">check_out_date:</span>
+                                      <span class="json-property-type">string</span>
                                       <span class="json-property-range" title="Value limits"></span>
                                       <span class="json-property-required"></span>
                                     </dt>
@@ -7128,7 +7394,10 @@
       }
     ],
     <span class="hljs-attr">&quot;check_in_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-    <span class="hljs-attr">&quot;check_out_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
+    <span class="hljs-attr">&quot;check_in_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;check_out_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+    <span class="hljs-attr">&quot;check_out_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;bad&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
   },
   <span class="hljs-attr">&quot;work&quot;</span>: {
     <span class="hljs-attr">&quot;items&quot;</span>: [
@@ -7136,7 +7405,9 @@
         <span class="hljs-attr">&quot;count&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
         <span class="hljs-attr">&quot;item_booking_id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;start_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-        <span class="hljs-attr">&quot;end_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
+        <span class="hljs-attr">&quot;check_in_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;end_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+        <span class="hljs-attr">&quot;check_out_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
       }
     ]
   },
@@ -7294,6 +7565,14 @@
                     <dd>
                       <p>Scheduled check-in date</p>
                     </dd>
+                    <dt data-property-name="check_in_date" class="has-description">
+                      <span class="json-property-name">check_in_date:</span>
+                      <span class="json-property-type">string</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>Scheduled checkin date</p>
+                    </dd>
                     <dt data-property-name="checkout_timestamp_in_seconds" class="has-description">
                       <span class="json-property-name">checkout_timestamp_in_seconds:</span>
                       <span class="json-property-type">number</span>
@@ -7301,6 +7580,14 @@
                     </dt>
                     <dd>
                       <p>Scheduled check-out date</p>
+                    </dd>
+                    <dt data-property-name="check_out_date" class="has-description">
+                      <span class="json-property-name">check_out_date:</span>
+                      <span class="json-property-type">string</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>Scheduled checkout date</p>
                     </dd>
                     <dt data-property-name="listing_id">
                       <span class="json-property-name">listing_id:</span>
@@ -7457,7 +7744,10 @@
         }
       ],
       <span class="hljs-attr">&quot;check_in_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-      <span class="hljs-attr">&quot;check_out_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
+      <span class="hljs-attr">&quot;check_in_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;check_out_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+      <span class="hljs-attr">&quot;check_out_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;bad&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     },
     <span class="hljs-attr">&quot;work&quot;</span>: {
       <span class="hljs-attr">&quot;items&quot;</span>: [
@@ -7465,7 +7755,9 @@
           <span class="hljs-attr">&quot;count&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
           <span class="hljs-attr">&quot;item_booking_id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;start_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-          <span class="hljs-attr">&quot;end_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
+          <span class="hljs-attr">&quot;check_in_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;end_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+          <span class="hljs-attr">&quot;check_out_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
         }
       ]
     },
@@ -7498,7 +7790,9 @@
   <span class="hljs-attr">&quot;stripe_charge_id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;total_amount_in_cents&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
   <span class="hljs-attr">&quot;checkin_timestamp_in_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+  <span class="hljs-attr">&quot;check_in_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;checkout_timestamp_in_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+  <span class="hljs-attr">&quot;check_out_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;listing_id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;listing_name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;listing_location&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -9676,9 +9970,19 @@
                                       <span class="json-property-type">number</span>
                                       <span class="json-property-range" title="Value limits"></span>
                                     </dt>
+                                    <dt data-property-name="check_in_date">
+                                      <span class="json-property-name">check_in_date:</span>
+                                      <span class="json-property-type">string</span>
+                                      <span class="json-property-range" title="Value limits"></span>
+                                    </dt>
                                     <dt data-property-name="check_out_timestamp_seconds">
                                       <span class="json-property-name">check_out_timestamp_seconds:</span>
                                       <span class="json-property-type">number</span>
+                                      <span class="json-property-range" title="Value limits"></span>
+                                    </dt>
+                                    <dt data-property-name="check_out_date">
+                                      <span class="json-property-name">check_out_date:</span>
+                                      <span class="json-property-type">string</span>
                                       <span class="json-property-range" title="Value limits"></span>
                                     </dt>
                                     <dt data-property-name="listing_booking_id">
@@ -9879,7 +10183,9 @@
       <span class="hljs-attr">&quot;listing_id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;stay&quot;</span>: {
         <span class="hljs-attr">&quot;check_in_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+        <span class="hljs-attr">&quot;check_in_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;check_out_timestamp_seconds&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+        <span class="hljs-attr">&quot;check_out_date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;listing_booking_id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;number_of_guests&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
         <span class="hljs-attr">&quot;rooms&quot;</span>: [
